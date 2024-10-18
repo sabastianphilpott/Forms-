@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Survey">
+  <title>Survey</title>
+</head>
+
+<body>
+  <form>
+    <fieldset>
+      <legend>Customer Experience Survey</legend>
+      <label for="store">Store Number</label>
+      <select name="store" id="store">
+        <!-- Bonus 1 -->
+        <option hidden>Select A Store</option>
+        <option value="3109">3109</option>
+        <option value="2421">2421</option>
+        <option value="5357">5357</option>
+      </select>
+
+      <fieldset>
+        <legend>When you visited:</legend>
+        <label for="date">Date Visited</label>
+        <!-- Bonus 2 -->
+        <!-- Adding the "min" & "max" attributes will limit the date selection to a specific range -->
+        <input type="date" id="date" name="date" min="2022-01-01" max="2022-12-31">
+        <br>
+        <label for="time">Time</label>
+        <input type="time" id="time" name="time">
+      </fieldset>
+
+      <label for="fullName">Full Name:</label>
+      <input type="text" id="fullName" name="fullName" placeholder="Name">
+      <br>
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email" placeholder="Email">
+
+      <fieldset>
+        <legend>How would you rate your level of satisfaction with your visit?</legend>
+        <input type="radio" name="visit" id="satisfied" value="satisfied">
+        <label for="satisfied">Satisfied</label>
+        <br>
+        <!-- Bonus 3 -->
+        <!-- Adding the "checked" attribute/keyword will cause the radio input to be selected by default (AKA When the page first loads) -->
+        <input type="radio" name="visit" id="neither" value="neither" checked>
+        <label for="neither">Neither Satisfied nor Dissatisfied</label>
+        <br>
+        <input type="radio" name="visit" id="dissatisfied" value="dissatisfied">
+        <label for="dissatisfied">Dissatisfied</label>
+      </fieldset>
+
+      <label for="experience">Tell us about your experience:</label>
+      <br>
+      <textarea name="experience" id="experience" cols="20" rows="2" style="resize:none"></textarea>
+
+      <br>
+
+      <label for="times">Times visited last month:</label>
+      <br>
+      <!-- Bonus 4 -->
+      <input type="number" id="times" name="times" min="1" max="30">
+
+      <br>
+
+      <!-- Bonus 5 -->
+      <!-- Adding the "required" attribute/keyword will NOT allow the user to submit the form unless the form element is completed (The checkbox being checked in this case) -->
+      <input type="checkbox" id="contact" name="contact" required>
+      <label for="contact">Please check the box if you would be willing to be contacted about your experience</label>
+
+      <br>
+
+      <!-- BONUS 6 -->
+      <!-- Using the minlength, maxlength, and the required attributes allows for a required min and max length to be set for the input. -->
+      <label for="password">Password</label>
+      <input type="password" name="password" id="password" minlength="5" maxlength="10" required>
+
+      <br>
+
+      <!-- Bonus 7 -->
+      <!-- A "reset" input clears out all the values entered/selected in a form -->
+      <input type="reset">
+
+      <input type="submit">
+      <!-- <button>Submit</button> -->
+
+    </fieldset>
+  </form>
+</body>
+
+</html>
